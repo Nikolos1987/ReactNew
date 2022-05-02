@@ -1,0 +1,12 @@
+.Message__unit{
+    display: flex;
+    background-color: aqua;
+    margin-top: 10px;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.Main_message{
+    width: 70%;
+    margin: auto;
+}
