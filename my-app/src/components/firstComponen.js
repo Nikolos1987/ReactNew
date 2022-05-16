@@ -1,16 +1,62 @@
-import '../components/firstComponent.css'
+import "../components/firstComponent.css";
+import { useState, useEffect } from "react";
+import { ModalWindow } from "./modalWindow.js";
+import { Message } from "./messages";
+
 export function MyComponent(props) {
-const listItems = props.message.map((number) =>
-<div className="Message__unit">
-<h1>{number.id}</h1>
-<h1>{number.text}</h1>
-</div>
-);
-    return (
-      <div className="Main_message">
- {listItems}
-  
-      </div>
-    );
-  }
-  
+  let count = "";
+  const [visual, setvisual] = useState(true);
+  const [username, setUsername] = useState("Noname");
+  let [messages, setMessages] = useState([]);
+  const [visualSpinner,setvisualSpinner]=useState(false)
+
+  useEffect(() => {
+    if (messages.length > 0 && messages[messages.length - 1].user !== "Robot") {
+      setvisualSpinner((a)=>a=true)
+      function add() {
+        setvisualSpinner((a)=>a=false)
+        setMessages([...messages, { post: "bot", user: "Robot" }]);
+      }
+      setTimeout(add, 1000);
+    }
+  }, [messages]);
+  const messagePush = () => {
+    setMessages([...messages, count]);
+    console.log(messages);
+  };
+  const buttonChange = (event) => {
+    count = { post: event.target.value, user: username };
+  };
+  return (
+    <div className="Main_message">
+      {visual && (
+        <ModalWindow setvisual={setvisual} setUsername={setUsername} />
+      )}
+      {!visual && <h1>привет, {username}</h1>}
+      <form className="row g-12">
+        <div className="mb-3">
+          <input
+            onChange={buttonChange}
+            type="text"
+            className="form-control"
+            id="exampleFormControlInput1"
+            placeholder="enter message"
+          ></input>
+        </div>
+        <div className="col-auto">
+          <button
+            onClick={messagePush}
+            type="button"
+            className="btn btn-success"
+          >
+            Success
+          </button>
+        </div>
+      </form>
+      {messages && <Message mesages={messages} />}
+ { visualSpinner &&<div className="spinner-border" role="status">
+<span class="sr-only"></span>
+</div>}
+    </div>
+  );
+}

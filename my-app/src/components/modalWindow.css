@@ -1,0 +1,16 @@
+.MainWindow{
+    background-color:gray;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    opacity: 50%;
+    z-index: 1;
+}
+.modal-dialog{
+position: absolute;
+left: 33%;
+width: 500px;
+z-index: 1;
+
+}
