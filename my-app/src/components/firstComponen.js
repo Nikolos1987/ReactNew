@@ -24,12 +24,7 @@ export function MyComponent(props) {
   const messagePush = () => {
 if(count){  setMessages([...messages,{post:count,user:username}]);
     setcount("")}
-
-  
-
-
-
-  };
+    };
   const buttonChange = (event) => {
     setcount (event.target.value) 
   };
