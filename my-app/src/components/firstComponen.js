@@ -22,8 +22,12 @@ export function MyComponent(props) {
     }
   }, [messages]);
   const messagePush = () => {
-    setMessages([...messages, count]);
-    setcount("")
+if(count){  setMessages([...messages,{post:count,user:username}]);
+    setcount("")}
+
+  
+
+
 
   };
   const buttonChange = (event) => {
@@ -36,9 +40,9 @@ export function MyComponent(props) {
       )}
       {!visual && <h1>привет, {username}</h1>}
       <form className="row g-12">
-        <div className="mb-3">
-          <input
-         value={count}
+        <div className="mb-3 ">
+          <input 
+          value={count}        
             onChange={buttonChange}
             type="text"
             className="form-control"
