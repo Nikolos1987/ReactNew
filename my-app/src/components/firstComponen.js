@@ -4,8 +4,9 @@ import { ModalWindow } from "./modalWindow.js";
 import { Message } from "./messages";
 
 export function MyComponent(props) {
-  let count = "";
-  const [visual, setvisual] = useState(true);
+
+  const [count,setcount]=useState("")
+  const [visual, setvisual] = useState(true); 
   const [username, setUsername] = useState("Noname");
   let [messages, setMessages] = useState([]);
   const [visualSpinner,setvisualSpinner]=useState(false)
@@ -13,7 +14,7 @@ export function MyComponent(props) {
   useEffect(() => {
     if (messages.length > 0 && messages[messages.length - 1].user !== "Robot") {
       setvisualSpinner((a)=>a=true)
-      function add() {
+      function add() { 
         setvisualSpinner((a)=>a=false)
         setMessages([...messages, { post: "bot", user: "Robot" }]);
       }
@@ -22,10 +23,11 @@ export function MyComponent(props) {
   }, [messages]);
   const messagePush = () => {
     setMessages([...messages, count]);
-    console.log(messages);
+    setcount("")
+
   };
   const buttonChange = (event) => {
-    count = { post: event.target.value, user: username };
+    setcount (event.target.value) 
   };
   return (
     <div className="Main_message">
@@ -36,6 +38,7 @@ export function MyComponent(props) {
       <form className="row g-12">
         <div className="mb-3">
           <input
+         value={count}
             onChange={buttonChange}
             type="text"
             className="form-control"
