@@ -22,8 +22,12 @@ export function MyComponent(props) {
     }
   }, [messages]);
   const messagePush = () => {
+    document.querySelector(".form-control").classList.remove("red")
 if(count){  setMessages([...messages,{post:count,user:username}]);
     setcount("")}
+    else{
+      document.querySelector(".form-control").classList.add("red")
+    }
     };
   const buttonChange = (event) => {
     setcount (event.target.value) 

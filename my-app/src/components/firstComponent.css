@@ -13,3 +13,6 @@
 .open{
     opacity: 0;
 }
+.red{
+    border: solid red;
+}
