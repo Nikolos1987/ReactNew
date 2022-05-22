@@ -1,11 +1,11 @@
 import "./App.css";
-import { MyComponent } from "./components/firstComponen.js";
-import { useState } from 'react';
+import {MessageList} from './components/main'
+
 
 function App() {
   return (
     <div className="App">
-      <MyComponent/>
+<MessageList/>
     </div>
   );
 }

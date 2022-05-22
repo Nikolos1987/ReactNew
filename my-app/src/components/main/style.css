@@ -1,0 +1,45 @@
+.message{
+    display: flex;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10px;
+
+}
+.wrapper{ 
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+  
+}
+.main{
+margin-left: 10px;
+    height: 100%;
+    
+}
+html,body,.root,.App{
+    height: 100%;
+}
+.header{
+
+}
+.messageList{
+    display: flex;
+min-height: 50px;
+  background-color: antiquewhite;  
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.messageBlock{
+    display: flex;
+
+}
+span{
+    word-wrap: break-word
+}
+.btn{
+
+    background-color: azure;
+}
