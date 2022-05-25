@@ -3,7 +3,7 @@ import './stile.css'
 export function Messages({data}){
 
   const messageData=data.map((n)=>
-<div key={data.id} className='messageBlock'>
+<div  className='messageBlock'>
   <Avatar alt="Remy Sharp" src={`image/${n.image}.jpg`} />
     <div className='messageList'>
         { n.message}</div></div>
