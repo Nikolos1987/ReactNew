@@ -4,6 +4,7 @@
    margin-right: 5%;
    margin-bottom: 10px;
 
+
 }
 .wrapper{ 
     display: flex;
@@ -20,7 +21,7 @@ html,body,.root,.App{
     height: 100%;
 }
 .header{
-
+    background-color: aquamarine;
 }
 .messageList{
     display: flex;
