@@ -33,14 +33,10 @@ min-height: 50px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.messageBlock{
-    display: flex;
 
-}
 span{
     word-wrap: break-word
 }
 .btn{
-
     background-color: azure;
 }

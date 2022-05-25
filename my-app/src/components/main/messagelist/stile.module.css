@@ -6,3 +6,8 @@
     margin-left: 20px;
     background-color: beige;
 }
+.messageBlock{
+    display: flex;
+    background-color: bisque;
+margin-bottom: 10px;
+}
