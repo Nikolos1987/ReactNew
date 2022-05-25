@@ -1,4 +1,4 @@
-import "./style.css";
+import "./Style.css";
 import Button from "@mui/material/Button";
 import Input from "@mui/material/Input";
 import { Messages } from "./messagelist";
@@ -18,7 +18,7 @@ useEffect(()=>{ref.current?.focus()},[])
   return (
     <div className="wrapper">
         <div className="header"><h1>Super Messanger</h1></div>
-        <div className="main" ><Messages key={send.id} data={send}/></div>
+        <div className="main" ><Messages  data={send}/></div>
       <div className="message">
         <Input className="btn" ref={ref} onChange={(e)=>setInput(e.target.value)} fullWidth={true}></Input>
         <Button onClick={add} variant="text" color={"secondary"}>
