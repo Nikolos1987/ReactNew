@@ -1,0 +1,28 @@
+.main{
+    width: 200px;
+    background-color:gray;
+
+}
+.component{
+    background-color: brown;
+    height: 100px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    text-decoration: none;
+    color:aliceblue;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.component:hover{
+
+    color:aliceblue;
+}
+.chenge{
+    background-color: azure;
+    height: 30px; 
+}
+.activ{
+    background-color: azure;
+    height: 30px;
+}

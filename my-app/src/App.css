@@ -39,3 +39,10 @@
 html,body,.root,.App{
   height: 100%;
 }
+.acti{
+  background-color: bisque;
+}
+.nav{
+  text-decoration: none;
+  height: 50px;
+}
