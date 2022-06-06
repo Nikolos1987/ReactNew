@@ -9,7 +9,7 @@ const menu=[
 export function Header(){
     return(
         <div>       
-             <NavLink to={"/gaga"}>sfs</NavLink>     
+
             {menu.map((item)=><li key={item.title}><NavLink to={item.to}>{item.title}</NavLink></li>)}
                 </div>
     )

@@ -1,7 +1,7 @@
 import styles from "./style.module.css"
 import { useRef,useEffect } from "react"
 import { Route,Routes,useParams,BrowserRouter,NavLink } from 'react-router-dom';
-
+import { Test } from "../test";
 export function Chatlist({chat}){
       const chenge=(e)=>{
         document.querySelectorAll('#as').forEach((n)=>n.className=styles.component)
@@ -12,19 +12,10 @@ export function Chatlist({chat}){
     let list=<div id="as" key={chat.room} className={styles.component} ref={ref} onClick={chenge}></div>
     
     useEffect(()=>{ },[])
- 
-        const params = useParams()
-    console.log(params,"dsf");
-
-        
-
-    return( 
-    
+     
+    return(     
         <div className={styles.main}> 
-        <Routes>
-            <Route path="/" element={<h1>select chatroom</h1>}></Route>
-            </Routes> 
-        {chat.map((n)=>
+         {chat.map((n)=>
         <NavLink className={styles.component}
         style={({isActive})=>{
             return{
@@ -32,7 +23,7 @@ export function Chatlist({chat}){
             }
 
         }}
-        to={`chat/${n.room}`}>{n.room}</NavLink>)}
+        to={`${n}`}>{n}</NavLink>)}
 
                   
             </div>
