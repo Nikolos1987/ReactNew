@@ -16,8 +16,10 @@ export function Messages({data}){
   useEffect(()=>{ref.current?.focus()},[])
  const[msgData,setmsgData]=useState(data)
  const add=()=>{
-  setmsgData((a)=>({...a,[id]:[{message:input,name:"robot",image:1,id:Date.now()}]}))
-
+  setmsgData((a)=>({...a,[id]:[
+    ...(a[id]??[]),
+    {message:input,name:"robot",image:1,id:Date.now()}]}))
+console.log(msgData);
  }
 
 
