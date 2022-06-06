@@ -19,7 +19,7 @@ export function Messages({data}){
   setmsgData((a)=>({...a,[id]:[{message:input,name:"robot",image:1,id:Date.now()}]}))
 
  }
-console.log(msgData[id][0].message);
+
 
 
   
