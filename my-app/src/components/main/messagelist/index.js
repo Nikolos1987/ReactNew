@@ -1,7 +1,7 @@
 import Avatar from '@mui/material/Avatar';
 import stile  from "../style.module.css"
 import { Route,Routes,useParams,BrowserRouter,Link } from 'react-router-dom';
-import { Test } from '../../test';
+
 import styles from "../style.module.css";
 import Input from "@mui/material/Input";
 import { useEffect, useState,useRef } from "react";
@@ -20,14 +20,10 @@ export function Messages({data}){
     ...(a[id]??[]),
     {message:input,name:"robot",image:1,id:Date.now()}]}))
 console.log(msgData);
- }
-
-
-
-  
+ } 
     return(
     <div key={data.id} className='main'>
-      <h1>{msgData[id].map(a=><h1>{a.message}</h1>)}</h1>
+    {msgData[id].map(a=><h1 key={id}>{a.message}</h1>)}
      <div className={style.message}>        
         <Input className={style.btn} ref={ref}  onChange={(e)=>setInput(e.target.value)} fullWidth={true}></Input>
         <Button onClick={add}  variant="text" color={"secondary"}>

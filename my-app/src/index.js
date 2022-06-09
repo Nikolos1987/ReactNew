@@ -5,22 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route,Routes,useParams,BrowserRouter,Link } from 'react-router-dom';
 import {Header} from './components/header'
-
+import { Provider } from 'react-redux';
+import { store } from './components/store';
 import { MessageList } from './components/main';
+import { Profile } from './components/profiles';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log(store);
 root.render(
-  <React.StrictMode>    
+  <React.StrictMode>  
+    <Provider store={store}>
     <BrowserRouter>
    <Header></Header>
     <Routes>
     <Route path='/' element={<h1>Welcome to Supermessanger</h1>}></Route>
        <Route path='/chat/*' element={<MessageList/>}></Route>
-       <Route path='*' element={<h1>Page not found</h1>}></Route>
-    
-
+       <Route path='*' element={<h1>Page not found</h1>}></Route>    
+       <Route path='/profile' element={<Profile/>}></Route>
     </Routes>
     </BrowserRouter>
-   
+   </Provider>  
   </React.StrictMode>
 );
 

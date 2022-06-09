@@ -1,7 +1,7 @@
 import styles from "./style.module.css"
 import { useRef,useEffect } from "react"
 import { Route,Routes,useParams,BrowserRouter,NavLink } from 'react-router-dom';
-import { Test } from "../test";
+
 export function Chatlist({chat}){
       const chenge=(e)=>{
         document.querySelectorAll('#as').forEach((n)=>n.className=styles.component)
