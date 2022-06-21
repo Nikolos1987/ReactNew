@@ -4,6 +4,8 @@ const menu=[
     {title:"Home", to:"/"},
     {title:"Chat", to:"/chat"},
     {title:"Profile", to:"/profile"},
+    {title:"Gists", to:"/gists"},
+    {title:"Gistsmgv", to:"/gistmgv"},
     
 ]
 export function Header(){
