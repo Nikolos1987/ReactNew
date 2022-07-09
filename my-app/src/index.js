@@ -11,8 +11,9 @@ import { MessageList } from './components/main';
 import { Profile } from './components/profiles';
 import { Gists,GGistsmgv } from './components/gists/gists';
 import { Gistsmgv } from './components/gists/gistmgv.js';
+import {PrivateRoute,PublicRoute} from'./components/route/route.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(store);
+const isAuth=true
 root.render(
   <React.StrictMode>  
     <Provider store={store}>
@@ -21,6 +22,7 @@ root.render(
     <Routes>
     <Route path='/' element={<h1>Welcome to Supermessanger</h1>}></Route>
        <Route path='/chat/*' element={<MessageList/>}></Route>
+       <Route path='/profile' element={<PrivateRoute isAuth={isAuth}><h1>Firebase</h1></PrivateRoute>}></Route>
        <Route path='/gists' element={<Gists/>}></Route>
        <Route path='/gistmgv' element={<Gistsmgv/>}></Route>
        <Route path='*' element={<h1>Page not found</h1>}></Route>    
