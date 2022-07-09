@@ -12,9 +12,6 @@ export function Profile (){
         <h1> {s.lastName}</h1>
     </div>}
     </div>
-  
-    
-
     )
 }
     
